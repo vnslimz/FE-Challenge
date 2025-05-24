@@ -49,24 +49,21 @@ header{
         grid-row: 3/span 2;
     }
 }
-@media screen and (max-width: 1200px){
+@media screen and (min-width: 900px) and (max-width:1200px) {
+    .cardset{
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(2, 250px);
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 900px){
     .cardset{
         display: grid;
         grid-template-columns: 350px;
         grid-template-rows: repeat(4, 250px);
         row-gap: 20px;
-    }
-    .card:nth-of-type(1){
-        grid-row: 1;
-    }
-    .card:nth-of-type(2){
-        grid-row: 2;
-    }
-    .card:nth-of-type(3){
-        grid-row: 3;
-    }
-    .card:nth-of-type(4){
-        grid-row: 4;
+
     }
 
 }
