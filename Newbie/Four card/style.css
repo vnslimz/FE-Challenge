@@ -1,0 +1,108 @@
+main{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins"
+}
+header{
+    text-align: center;
+    margin: 5vh;
+    width: 35vw;
+}
+#header1{
+    font-size: 30px;
+    font-weight: 200;
+}
+#header2{
+    font-size: 30px;
+    font-weight: 600;
+}
+#bio{
+    margin-top: 2vh;
+    font-size: 15px;
+    font-weight: 200;
+}
+@media screen and (min-width: 1200px) {
+    .cardset{
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(4, 120px);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .card:nth-of-type(1){
+        grid-column: 2;
+        grid-row: 1/ span 2;
+    }
+    .card:nth-of-type(2){
+        grid-column: 1;
+        grid-row: 2/span 2;
+    }
+    .card:nth-of-type(3){
+        grid-column: 3;
+        grid-row: 2/span 2;
+    }
+    .card:nth-of-type(4){
+        grid-column: 2;
+        grid-row: 3/span 2;
+    }
+}
+@media screen and (max-width: 1200px){
+    .cardset{
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: repeat(4, 250px);
+        row-gap: 20px;
+    }
+    .card:nth-of-type(1){
+        grid-row: 1;
+    }
+    .card:nth-of-type(2){
+        grid-row: 2;
+    }
+    .card:nth-of-type(3){
+        grid-row: 3;
+    }
+    .card:nth-of-type(4){
+        grid-row: 4;
+    }
+
+}
+.card{
+    border-top: 5px solid;
+    box-shadow: 
+        -4px 0 15px rgba(0, 0, 0, 0.1),  /* left shadow */
+        4px 0 15px rgba(0, 0, 0, 0.1),  /* right shadow */
+        0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+}
+.cardtitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.cardcontent{
+    font-size: 13px;
+    font-weight: 200;
+}
+.cardlogo{
+    margin-top: auto;
+    align-self: flex-end;
+}
+.card:nth-of-type(1){
+    border-color: red;
+}
+.card:nth-of-type(2){
+    border-color: cyan;
+}
+.card:nth-of-type(3){
+    border-color: blue;
+}
+.card:nth-of-type(4){
+    border-color: yellow;
+}
+
